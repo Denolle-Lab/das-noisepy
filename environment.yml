@@ -1,0 +1,18 @@
+name: das-noisepy
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.8
+  - numpy
+  - scipy
+  - matplotlib
+  - h5py
+  - obspy
+  - jupyter
+  - notebook
+  - ipython
+  - pip
+  - pip:
+    - noisepy
+    - noisepy-io

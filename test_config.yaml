@@ -1,0 +1,45 @@
+channel_pairs:
+  distance_bins: 20
+  max_pairs_per_separation: null
+  max_separation: 1000.0
+  min_separation: 10.0
+  selection_method: distance
+  step_size: null
+  target_pairs_per_distance: 50
+cross_correlation:
+  cc_threshold: 0.01
+  max_lag_time: 10.0
+  method: fft
+  normalization: cross
+  stack_method: linear
+  time_window_length: 3600
+  time_window_overlap: 0.5
+  whitening: true
+  whitening_freqs:
+  - 0.1
+  - 10.0
+das:
+  channel_spacing: 1.0
+  data_format: hdf5
+  gauge_length: 10.0
+  sampling_rate: 1000.0
+io:
+  chunk_size: 1024
+  compression: gzip
+  output_directory: ./output
+  save_individual_correlations: false
+preprocessing:
+  bandpass_filter: true
+  decimate_factor: null
+  detrend: true
+  freq_max: 10.0
+  freq_min: 0.01
+  quality_control: true
+  snr_threshold: 2.0
+  taper: true
+  taper_fraction: 0.05
+processing:
+  chunk_processing: true
+  memory_limit: 8GB
+  n_processes: 4
+  parallel: true

@@ -1,0 +1,24 @@
+# Core scientific computing
+numpy>=1.20.0
+scipy>=1.7.0
+matplotlib>=3.3.0
+pandas>=1.3.0
+
+# DAS and seismic data processing
+obspy>=1.2.0
+h5py>=3.1.0
+xarray>=0.18.0
+
+# NoisePy dependencies
+mpi4py>=3.0.0
+numba>=0.50.0
+pyfftw>=0.12.0
+
+# Configuration and utilities
+pyyaml>=5.4.0
+tqdm>=4.60.0
+click>=8.0.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipywidgets>=7.6.0

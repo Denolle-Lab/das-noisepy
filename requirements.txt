@@ -1,0 +1,13 @@
+# Core scientific computing packages
+obspy
+matplotlib
+h5py
+
+# Noisepy packages for ambient noise seismology
+# Note: Installing noisepy without mpi4py to avoid installation failures
+noisepy
+noisepy-io
+
+# Additional useful packages for DAS data processing
+numpy
+scipy

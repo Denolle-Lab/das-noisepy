@@ -42,7 +42,7 @@ class CrossCorrelator:
     def _default_config(self) -> Dict:
         """Default configuration parameters"""
         return {
-            'correlation_method': 'fft',  # 'fft' or 'time_domain'
+            'method': 'fft',              # 'fft' or 'time_domain'
             'max_lag_time': 10.0,         # seconds
             'normalization': 'cross',     # 'cross', 'auto', or 'none'
             'whitening': True,
@@ -188,7 +188,7 @@ class CrossCorrelator:
             trace2 = data.strain.isel(channel=pair.ch2).values
             
             # Compute cross-correlation
-            if self.config['correlation_method'] == 'fft':
+            if self.config['method'] == 'fft':
                 cc = self._fft_correlate(trace1, trace2, max_lag_samples)
             else:
                 cc = self._time_domain_correlate(trace1, trace2, max_lag_samples)

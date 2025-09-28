@@ -301,8 +301,8 @@ class DASProcessor:
             
         info = {
             'n_channels': len(self.data.channel),
-            'channel_spacing': self.data.attrs.get('channel_spacing', self.config['channel_spacing']),
-            'total_length': len(self.data.channel) * self.data.attrs.get('channel_spacing', self.config['channel_spacing']),
+            'channel_spacing': self.data.attrs.get('channel_spacing', 1.0),
+            'total_length': len(self.data.channel) * self.data.attrs.get('channel_spacing', 1.0),
             'sampling_rate': self.data.attrs['sampling_rate'],
             'duration': len(self.data.time) / self.data.attrs['sampling_rate'],
         }
